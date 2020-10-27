@@ -12,6 +12,16 @@ body {
   flex-direction: column;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
 .top {
   width: 100vw;
   height: auto;
@@ -439,6 +449,16 @@ body {
   }
 }
 @media (min-width: 1440px) {
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+  }
+  .attribution a {
+    color: #3e52a3;
+  }
+
   .top {
     width: 100vw;
     height: 60vh;
