@@ -144,8 +144,7 @@
 @mixin slideshow-container 
 {
     @include position-z-index(relative, 1);
-    width: 100%;
-    height: 100%;
+    @include flexbox-size(100%, 100%, row);
 
     > .slides 
     {

@@ -62,7 +62,8 @@ body
 
             .nav-links
             {
-                @include nav-links($white, 100vw, 5, 3vh);                
+                @include nav-links($white, 100vw, 5, 3vh);
+                display: none;
 
                 > .link
                 {

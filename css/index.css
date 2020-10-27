@@ -82,6 +82,7 @@ body {
   height: auto;
   padding-top: 3vh;
   padding-bottom: 3vh;
+  display: none;
 }
 .top > .top-left > .main-header .nav-links > .link {
   list-style: none;
@@ -99,6 +100,8 @@ body {
   z-index: 1;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 .top > .top-left > .slideshow-container > .slides {
   position: absolute;
@@ -546,6 +549,8 @@ body {
     z-index: 1;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: row;
   }
   .top > .top-left > .slideshow-container > .slides {
     position: absolute;
