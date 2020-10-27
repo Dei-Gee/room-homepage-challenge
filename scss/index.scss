@@ -475,6 +475,14 @@ body
                     {
                         @include info-slide-link(medium);
                         top: 0%;
+                        transition: 300ms;
+                        opacity: 1;
+
+                        &:hover
+                        {
+                            transition: 300ms;
+                            opacity: .5;
+                        }
                     }
                 }
             }
