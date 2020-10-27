@@ -6,8 +6,8 @@ $(document).ready(() => {
     let nextBtn = $('#nextBtn');
     let imageSlides = [...$('.slides')];
     let infoSlides = [...$('.info-slides')];
-    let counterOne = 1;
-    let counterTwo = 1;
+    let counterOne = 0;
+    let counterTwo = 0;
 
     // set the first div visible by default
     const defaultSlideConfig = (arr) => {
@@ -28,21 +28,43 @@ $(document).ready(() => {
         
         let prevSlide = null;
 
-        if(count > (arr.length-1))
+        if(count >= (arr.length-1))
         {
+            count+=1;
             prevSlide = arr[arr.length-1];
             count = 0;
-            console.log(count);
             $(arr[count]).fadeIn('fast').css('display', 'block');
             prevSlide = $(arr[arr.length-1]).fadeOut('fast').css('display', 'none');
-            count+=1;
         }
         else
         {
+            count += 1;
             prevSlide = arr[count-1];
             $(arr[count]).fadeIn('fast').css('display', 'block');
             $(prevSlide).fadeOut('fast').css('display', 'none');
-            count += 1;
+        }
+        return count;
+    }
+
+    // next button function
+    const prevButtonFunction = (arr, count) => {
+        
+        let prevSlide = null;
+
+        if(count <= 0)
+        {
+            count-=1;
+            prevSlide = arr[count+1];
+            count = arr.length-1;
+            $(arr[count]).fadeIn('fast').css('display', 'block');
+            $(prevSlide).fadeOut('fast').css('display', 'none');
+        }
+        else
+        {
+            count -= 1;
+            prevSlide = arr[count+1];
+            $(arr[count]).fadeIn('fast').css('display', 'block');
+            $(prevSlide).fadeOut('fast').css('display', 'none');
         }
         return count;
     }
@@ -58,12 +80,12 @@ $(document).ready(() => {
         navLinks.fadeToggle('slow').css('display', 'flex');
     });
 
-    navLink.hover(() => {
+    navLinks.hover(() => {
             // over
-            $(this).css({'backgroundColor': 'black', 'transition': '300ms', 'color': 'white'});
+            $(this).find('.link-underline').fadeIn('fast').css({'border': '1px solid black', 'transition': '300ms', 'height': '0', 'width': '25%'});
         }, () => {
             // out
-            $(this).css({'backgroundColor': 'transparent', 'transition': '300ms', 'color': 'black'});
+            $('.link-underline').fadeOut('fast');
         }
     );
 
@@ -72,6 +94,9 @@ $(document).ready(() => {
         counterTwo = nextButtonFunction(infoSlides, counterTwo);
     });
 
-    
+    prevBtn.click(() => {
+        counterOne = prevButtonFunction(imageSlides, counterOne);
+        counterTwo = prevButtonFunction(infoSlides, counterTwo);
+    });
 
 });
