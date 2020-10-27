@@ -389,6 +389,22 @@ body
                         {
                             @include link-tag($white);
                             font-size: 1.5rem;
+                            
+                            &#one, 
+                            &#two, 
+                            &#three, 
+                            &#four
+                            {
+                                &:hover
+                                {
+                                    + .link-underline
+                                    {
+                                        border: solid 1px $white;
+                                        width: 25%;
+                                        transition: 300ms;
+                                    }
+                                }
+                            }
                         }
 
                         > .link-underline
@@ -401,6 +417,7 @@ body
                             top: 10px;
                             left: 50%;
                             transform: translateX(-50%);
+                            transition: 300ms;
                         }
                     }
                 }

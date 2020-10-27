@@ -76,14 +76,6 @@ $(document).ready(() => {
         navLinks.fadeToggle('slow').css('display', 'flex');
     });
 
-    navLinks.hover(() => {
-            // over
-            $(this).find('.link-underline').fadeIn('fast').css({'border': '1px solid black', 'transition': '300ms', 'height': '0', 'width': '25%'});
-        }, () => {
-            // out
-            $('.link-underline').fadeOut('fast');
-        }
-    );
 
     nextBtn.click(() => {
         counterOne = nextButtonFunction(imageSlides, counterOne);
@@ -94,5 +86,7 @@ $(document).ready(() => {
         counterOne = prevButtonFunction(imageSlides, counterOne);
         counterTwo = prevButtonFunction(infoSlides, counterTwo);
     });
+
+    
 
 });

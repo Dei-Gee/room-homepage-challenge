@@ -524,6 +524,11 @@ body {
     text-align: center;
     font-size: 1.5rem;
   }
+  .top > .top-left > .main-header > .nav-links > .link > a#one:hover + .link-underline, .top > .top-left > .main-header > .nav-links > .link > a#two:hover + .link-underline, .top > .top-left > .main-header > .nav-links > .link > a#three:hover + .link-underline, .top > .top-left > .main-header > .nav-links > .link > a#four:hover + .link-underline {
+    border: solid 1px white;
+    width: 25%;
+    transition: 300ms;
+  }
   .top > .top-left > .main-header > .nav-links > .link > .link-underline {
     transition: 300ms;
     width: 0;
@@ -533,6 +538,7 @@ body {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
+    transition: 300ms;
   }
   .top > .top-left > .main-header > .burger {
     display: none;
