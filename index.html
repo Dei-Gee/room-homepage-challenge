@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan">
+    <link rel="stylesheet" href="css/index.css">
     
     <title>Frontend Mentor | Room homepage</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      * { font-family: 'Spartan'; font-size: 12px; }
       .attribution { font-size: 11px; text-align: center; }
       .attribution a { color: hsl(228, 45%, 44%); }
     </style>
@@ -19,42 +22,52 @@
     <div class="top">
       <!-- left div -->
       <div class="top-left">
-        <header class="main-header">
-          <div class="logo"></div>
-          <nav class="navigation">
-            <div class="link">
-              <a href="http://">home</a>
-              <div class="link-underline"></div>
-            </div>
+        <nav class="main-header">
+          <!-- mobile menu -->
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          
+          <div class="logo">
+            <h4>room</h4>
+          </div>
 
-            <div class="link">
-              <a href="http://">shop</a>
+          <ul class="nav-links">
+            <li class="link">
+              <a href="index.html">home</a>
               <div class="link-underline"></div>
-            </div>
-
-            <div class="link">
-              <a href="http://">about</a>
+            </li>
+  
+            <li class="link">
+              <a href="index.html">shop</a>
               <div class="link-underline"></div>
-            </div>
-
-            <div class="link">
-              <a href="http://">contact</a>
+            </li>
+  
+            <li class="link">
+              <a href="index.html">about</a>
               <div class="link-underline"></div>
-            </div>
-          </nav>
-        </header>
+            </li>
+  
+            <li class="link">
+              <a href="index.html">contact</a>
+              <div class="link-underline"></div>
+            </li>
+          </ul>
+        </nav>
 
         <div class="slideshow-container">
           <div class="slides">
-            <img src="" alt="slideOne">
+            <img src="./images/desktop-image-hero-1.jpg" alt="slideOne">
           </div>
 
           <div class="slides">
-            <img src="" alt="slideTwo">
+            <img src="./images/desktop-image-hero-2.jpg" alt="slideTwo">
           </div>
 
           <div class="slides">
-            <img src="" alt="slideThree">
+            <img src="./images/desktop-image-hero-3.jpg" alt="slideThree">
           </div>
         </div>
       </div>
@@ -69,7 +82,10 @@
               Our experts combine form andnfunction in bringing your vision to life. Create a room in your 
               own style with our collection and make your property a reflection of you and what you love.
             </div>
-            <div class="info-slide-link">Shop now</div>
+            <a href="index.html" class="info-slide-link">
+              <span>Shop now</span>
+              <img src="./images/icon-arrow.svg" alt="arrow-right">
+            </a>
           </div>
 
           <div class="info-slides">
@@ -79,7 +95,10 @@
               Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
               store locator. Any questions? Don't hesitate to contact us today.
             </div>
-            <div class="info-slide-link">Shop now</div>
+            <a href="index.html" class="info-slide-link">
+              <span>Shop now</span>
+              <img src="./images/icon-arrow.svg" alt="arrow-right">
+            </a>
           </div>
 
           <div class="info-slides">
@@ -89,16 +108,27 @@
               to ensure that every product is made as perfect and as consistent as possible. With three decades of 
               experience in this industry, we understand what customers want for their home and office.
             </div>
-            <div class="info-slide-link">Shop now</div>
+            <a href="index.html" class="info-slide-link">
+              <span>Shop now</span>
+              <img src="./images/icon-arrow.svg" alt="arrow-right">
+            </a>
           </div>
         </div>
 
-        <div class="info-nav-container"></div>
+        <div class="info-nav-container">
+          <div class="viewbox">
+            <img src="./images/icon-angle-left.svg" alt="arrow-right">
+          </div>
+          <div class="viewbox">
+            <img src="./images/icon-angle-right.svg" alt="arrow-right">
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="bottom">
       <div class="bottom-left">
-        <img src="" alt="bottom left image">
+        <img src="./images/image-about-dark.jpg" alt="bottom left image">
       </div>
       
       <div class="bottom-center">
@@ -114,13 +144,15 @@
       </div>
 
       <div class="bottom-right">
-        <img src="" alt="bottom right image">
+        <img src="./images/image-about-light.jpg" alt="bottom right image">
       </div>
     </div>
     
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/Dei-Gee">Deji Ojo</a>.
+    <div class="footer">
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/Dei-Gee">Deji Ojo</a>.
+      </div>
     </div>
   </body>
 </html>
