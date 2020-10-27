@@ -72,10 +72,6 @@ $(document).ready(() => {
     defaultSlideConfig(imageSlides);
     defaultSlideConfig(infoSlides);
 
-
-
-
-
     burger.click(() => { 
         navLinks.fadeToggle('slow').css('display', 'flex');
     });

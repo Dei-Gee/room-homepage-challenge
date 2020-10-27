@@ -438,7 +438,7 @@ body
 
                     > .info-slide-heading
                     {
-                        @include heading-size(xx-large);
+                        @include heading-size(2.3rem);
                         position: relative;
                         @include shared-centered-stats-with-position(50%, 50%);
                         top: 30%;
